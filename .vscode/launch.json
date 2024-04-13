@@ -16,5 +16,13 @@
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html"
     }
-  ]
+  ],
+  "todohighlight.keywordsPattern": "//#[region | endregion].*",
+  "todohighlight.keywords": ["//#region", "//#endregion"],
+  "todohighlight.defaultStyle": {
+    "color": "#ffffff",
+    "borderRadius": "4px",
+    "border": "1px solid #ffffff",
+    "backgroundColor": "transparent"
+  }
 }
