@@ -1,0 +1,29 @@
+{
+  "name": "custom-schematics",
+  "version": "0.0.0",
+  "description": "A custom schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "copyfiles -u 1 src/*/schema.json src/*/files/**/*.template src/collection.json ./schematics",
+    "test": "npm run build && jasmine src/**/*_spec.js"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./schematics/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^17.3.6",
+    "@angular-devkit/schematics": "^17.3.6",
+    "@schematics/angular": "^17.3.6",
+    "typescript": "~5.4.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/schematics-cli": "^17.3.6",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "^18.18.0",
+    "copyfiles": "^2.4.1",
+    "jasmine": "^5.0.0"
+  }
+}

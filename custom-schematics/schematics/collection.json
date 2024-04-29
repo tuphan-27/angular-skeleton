@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "scam-module": {
+      "aliases": ["sm"],
+      "description": "SCAM module.",
+      "factory": "./scam-module/index#scamModule",
+      "schema": "./scam-module/schema.json"
+    }
+  }
+}
