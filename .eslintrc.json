@@ -11,6 +11,9 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:prettier/recommended"
       ],
+      "plugins": [
+        "simple-import-sort"
+      ],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
@@ -26,6 +29,43 @@
             "type": "element",
             "prefix": "app",
             "style": "kebab-case"
+          }
+        ],
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              [
+                "^@?(?!src\\b)(?!app\\b)\\w+"
+              ],
+              [
+                "@?(app|src|\\.|\\.\\.).*module"
+              ],
+              [
+                "@?(app|src|\\.|\\.\\.).*guard",
+                "@?(app|src|\\.|\\.\\.).*pipe",
+                "@?(app|src|\\.|\\.\\.).*directive"
+              ],
+              [
+                "@?(app|src|\\.|\\.\\.).*helper",
+                "@?(app|src|\\.|\\.\\.).*utilities"
+              ],
+              [
+                "@?(app|src|\\.|\\.\\.).*constant",
+                "@?(app|src|\\.|\\.\\.).*enum",
+                "@?(app|src|\\.|\\.\\.).*model"
+              ],
+              [
+                "@?(app|src|\\.|\\.\\.).*component",
+                "@?(app|src|\\.|\\.\\.).*service"
+              ],
+              [
+                "@?(app|src|\\.|\\.\\.).*action",
+                "@?(app|src|\\.|\\.\\.).*selector",
+                "@?(app|src|\\.|\\.\\.).*state",
+                "@?(app|src|\\.|\\.\\.).*store"
+              ]
+            ]
           }
         ]
       }
