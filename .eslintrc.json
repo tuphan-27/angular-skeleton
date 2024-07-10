@@ -97,7 +97,7 @@
           {
             "allowNumber": true,
             "allowBoolean": true,
-            "allowAny": false,
+            "allowAny": true,
             "allowNullish": false
           }
         ],
