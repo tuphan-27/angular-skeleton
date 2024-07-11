@@ -3,7 +3,7 @@
   "ignorePatterns": [
     "*.spec.ts",
     "*.js",
-    "*.{html,css,scss,md,json}"
+    "*.{html,css,scss,md}"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

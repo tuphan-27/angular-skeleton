@@ -54,6 +54,12 @@
       "@app/widgets/*": [
         "src/app/widgets/*"
       ],
+      "@app/icons": [
+        "src/assets/icons"
+      ],
+      "@app/isons/*": [
+        "src/assets/icons/*"
+      ],
       "@app/modules/*": [
         "src/app/modules/*"
       ],
