@@ -30,23 +30,35 @@
       "@environments/*": [
         "src/app/environments/*"
       ],
-      "@app/shared": [
-        "src/app/shared"
+      "@app/core": [
+        "src/app/core"
       ],
-      "@app/shared/*": [
-        "src/app/shared/*"
+      "@app/core/*": [
+        "src/app/core/*"
+      ],
+      "@app/layouts": [
+        "src/app/layouts"
+      ],
+      "@app/layouts/*": [
+        "src/app/layouts/*"
+      ],
+      "@app/store": [
+        "src/app/store"
+      ],
+      "@app/store/*": [
+        "src/app/store/*"
+      ],
+      "@app/widgets": [
+        "src/app/widgets"
+      ],
+      "@app/widgets/*": [
+        "src/app/widgets/*"
       ],
       "@app/modules/*": [
         "src/app/modules/*"
       ],
       "@app/modules/": [
         "src/app/modules"
-      ],
-      "@app/core": [
-        "src/app/core"
-      ],
-      "@app/core/*": [
-        "src/app/core/*"
       ]
     },
   },
