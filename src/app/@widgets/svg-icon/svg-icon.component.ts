@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SvgIconsRegistryService } from '@app/core/services';
+import { SvgIconsRegistryService } from '@core/services';
 
 @Component({
     selector: 'app-svg-icon',
