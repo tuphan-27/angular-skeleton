@@ -1,2 +1,2 @@
 export * from './base.service';
-export * from './icons-registry.service';
+export * from './svg-icons-registry.service';

@@ -75,7 +75,7 @@
         "outputDirectory": "./src/assets/icons",
         "interfaceName": "SvgIcon",
         "typeName": "svgIcon",
-        "prefix": "",
+        "prefix": "svg",
         "fileName": "icons.constants",
         "additionalModelFile": "./src/assets/icons",
         "compileSources": true

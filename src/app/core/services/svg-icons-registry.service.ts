@@ -5,7 +5,7 @@ import { SvgIcon } from '@app/isons/icons.constants';
 @Injectable({
     providedIn: 'root'
 })
-export class IconsRegistryService {
+export class SvgIconsRegistryService {
     private _registry = new Map<string, string>();
 
     registerIcons(icons: SvgIcon[]) {
@@ -14,9 +14,7 @@ export class IconsRegistryService {
 
     getIcon(iconName: string) {
         if (!this._registry.has(iconName)) {
-            throw new Error(
-                `We could not find the WooSender Icon with the name ${iconName}, did you add it to the Icon registry?`
-            );
+            return;
         }
 
         return this._registry.get(iconName);
