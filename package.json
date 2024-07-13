@@ -1,5 +1,5 @@
 {
-  "name": "project-skeleton",
+  "name": "angular-skeleton",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

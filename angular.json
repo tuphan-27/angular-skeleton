@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project-skeleton": {
+    "angular-skeleton": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
-            "outputPath": "dist/project-skeleton",
+            "outputPath": "dist/angular-skeleton",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "project-skeleton:build:production"
+              "buildTarget": "angular-skeleton:build:production"
             },
             "development": {
-              "buildTarget": "project-skeleton:build:development"
+              "buildTarget": "angular-skeleton:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "project-skeleton:build"
+            "buildTarget": "angular-skeleton:build"
           }
         },
         "test": {
