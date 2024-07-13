@@ -1,7 +1,9 @@
 name: Deploy To Gihub Pages
 on:
     push:
-        branches: ['develop/ci-cd']
+        branches: ['main']
+    pull_request:
+        branches: ['main']
     workflow_dispatch:
 
 permissions:
