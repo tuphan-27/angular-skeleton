@@ -30,5 +30,5 @@ Includes Typescript elements (constants, enums, models, ultilities) shared acros
 ### modules
 Includes modules handling business logic. Each module should represent a specific feature.
 
-### modules.shared
+### modules/shared
 Includes shared modules handling business logic are used to accross featured modules. 
