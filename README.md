@@ -1,27 +1,34 @@
-# ProjectSkeleton
+## Getting Started
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+**Angular Version**: v17.
 
-## Development server
+**Css Library**: Tailwind.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Store Management**: Ngrx.
 
-## Code scaffolding
+**Coding Convention and Format**: Eslint, Husky, Prettier.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Folder Structure
+### @core
+Includes Angular-related elements (directives, pipes, guards, interceptors, pipes, services) shared across modules in the app.
 
-## Build
+### @layouts
+Includes components used to create layouts, such as navbar, header and footer.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### @store
+Includes global store management for the app.
 
-## Running unit tests
+### @widgets
+Includes shared components used across modules in the app. These components should handle non-business logic.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### pages
+Includes modules handling non-business logic, such as the landing page or not-found page.
 
-## Running end-to-end tests
+### shared
+Includes Typescript elements (constants, enums, models, ultilities) shared across modules in the app.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### modules
+Includes modules handling business logic. Each module should represent a specific feature.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### modules.shared
+Includes shared modules handling business logic are used to accross featured modules. 
