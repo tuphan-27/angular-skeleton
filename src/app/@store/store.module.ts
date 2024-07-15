@@ -1,23 +1,16 @@
-import { isDevMode, NgModule } from '@angular/core';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NgModule } from '@angular/core';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from '@environment';
 
-import { AppStateEnum } from './app-state.enums';
-
-import { userReducer } from './user/user.reducer';
+import { UserState } from './user/user.state';
 
 @NgModule({
     imports: [
-        StoreModule.forRoot({
-            [AppStateEnum.User]: userReducer
-        }),
-        StoreDevtoolsModule.instrument({
-            maxAge: 25,
-            logOnly: !isDevMode(),
-            autoPause: true,
-            trace: false,
-            traceLimit: 75,
-            connectInZone: true
+        NgxsModule.forRoot([UserState]),
+        NgxsReduxDevtoolsPluginModule.forRoot({
+            name: 'Ngxs Store',
+            disabled: environment.isProduction
         })
     ]
 })

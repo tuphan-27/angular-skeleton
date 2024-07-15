@@ -22,8 +22,7 @@
         "@angular/platform-browser": "^17.3.11",
         "@angular/platform-browser-dynamic": "^17.3.11",
         "@angular/router": "^17.3.11",
-        "@ngrx/entity": "^17.2.0",
-        "@ngrx/store": "^17.2.0",
+        "@ngxs/store": "^18.0.0",
         "rxjs": "~7.5.0",
         "zone.js": "~0.14.7"
     },
@@ -36,8 +35,8 @@
         "@angular-eslint/template-parser": "17.5.2",
         "@angular/cli": "^17.3.8",
         "@angular/compiler-cli": "^17.3.11",
+        "@ngxs/devtools-plugin": "^18.0.0",
         "@types/jasmine": "~4.3.0",
-        "@ngrx/store-devtools": "^17.2.0",
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
         "autoprefixer": "^10.4.19",
@@ -57,8 +56,8 @@
         "prettier": "3.2.5",
         "svg-to-ts": "^12.0.0",
         "tailwindcss": "^3.4.4",
-        "typescript": "~5.4.5",
-        "tslib": "^2.3.0"
+        "tslib": "^2.3.0",
+        "typescript": "~5.4.5"
     },
     "svg-to-ts": {
         "srcFiles": [

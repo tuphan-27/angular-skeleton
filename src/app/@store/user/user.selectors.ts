@@ -1,11 +1,10 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { Selector } from '@ngxs/store';
 
-import { AppStateEnum } from '@store/app-state.enums';
+import { UserState, UserStateModel } from './user.state';
 
-import { UserState } from './user.reducer';
-
-const selectUserFeature = createFeatureSelector<UserState>(AppStateEnum.User);
-
-export const UserSelectors = {
-    selectUser: createSelector(selectUserFeature, (state) => state.user)
-};
+export class UserSelectors {
+    @Selector([UserState])
+    static selectUser(state: UserStateModel) {
+        return state.user;
+    }
+}

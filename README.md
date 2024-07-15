@@ -4,7 +4,7 @@
 
 **Css Library**: Tailwind.
 
-**Store Management**: Ngrx.
+**Store Management**: Ngxs.
 
 **Coding Convention and Format**: Eslint, Husky, Prettier.
 
