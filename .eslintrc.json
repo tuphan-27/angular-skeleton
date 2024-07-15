@@ -1,10 +1,6 @@
 {
     "root": true,
-    "ignorePatterns": [
-        "*.spec.ts",
-        "*.js",
-        "*.{html,css,scss,md}"
-    ],
+    "ignorePatterns": ["*.spec.ts", "*.js", "*.{html,css,scss,md}"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -13,9 +9,7 @@
     },
     "overrides": [
         {
-            "files": [
-                "*.ts"
-            ],
+            "files": ["*.ts"],
             "extends": [
                 "eslint:recommended",
                 "plugin:@typescript-eslint/recommended",
@@ -23,11 +17,8 @@
                 "plugin:@angular-eslint/template/process-inline-templates",
                 "plugin:prettier/recommended"
             ],
-            "plugins": [
-                "simple-import-sort"
-            ],
+            "plugins": ["simple-import-sort"],
             "rules": {
-                // Angular Eslint
                 "@angular-eslint/directive-selector": [
                     "error",
                     {
@@ -44,10 +35,7 @@
                         "style": "kebab-case"
                     }
                 ],
-                "@angular-eslint/prefer-on-push-component-change-detection": [
-                    "error"
-                ],
-                // Typescript Eslint
+                "@angular-eslint/prefer-on-push-component-change-detection": ["error"],
                 "@typescript-eslint/no-explicit-any": "off",
                 "@typescript-eslint/no-var-requires": "off",
                 "no-array-constructor": "off",
@@ -67,7 +55,7 @@
                 "@typescript-eslint/no-confusing-non-null-assertion": "warn",
                 "no-empty-function": "off",
                 "@typescript-eslint/no-empty-function": "off",
-                "@typescript-eslint/no-empty-interface": "error",
+                "@typescript-eslint/no-empty-interface": "off",
                 "@typescript-eslint/no-inferrable-types": "warn",
                 "@typescript-eslint/prefer-for-of": "warn",
                 "@typescript-eslint/prefer-function-type": "error",
@@ -101,10 +89,7 @@
                         "allowNullish": false
                     }
                 ],
-                "@typescript-eslint/semi": [
-                    "error",
-                    "always"
-                ],
+                "@typescript-eslint/semi": ["error", "always"],
                 "@typescript-eslint/type-annotation-spacing": "error",
                 "@typescript-eslint/unified-signatures": "error",
                 "@typescript-eslint/prefer-optional-chain": "warn",
@@ -131,11 +116,7 @@
                         "accessibility": "explicit"
                     }
                 ],
-                // Eslint
-                "eqeqeq": [
-                    "error",
-                    "smart"
-                ],
+                "eqeqeq": ["error", "smart"],
                 "no-bitwise": "error",
                 "no-caller": "error",
                 "no-cond-assign": "error",
@@ -187,10 +168,7 @@
                         ]
                     }
                 ],
-                "object-curly-spacing": [
-                    "error",
-                    "always"
-                ],
+                "object-curly-spacing": ["error", "always"],
                 "prefer-const": "error",
                 "prefer-object-spread": "error",
                 "constructor-super": "error",
@@ -209,14 +187,8 @@
                     "undefined"
                 ],
                 "new-parens": "error",
-                "one-var": [
-                    "error",
-                    "never"
-                ],
-                "quote-props": [
-                    "error",
-                    "as-needed"
-                ],
+                "one-var": ["error", "never"],
+                "quote-props": ["error", "as-needed"],
                 "radix": "error",
                 "use-isnan": "error",
                 "space-before-function-paren": [
@@ -298,7 +270,6 @@
                 "no-fallthrough": "off",
                 "no-invalid-this": "off",
                 "no-underscore-dangle": "off",
-                // Simple Import Sort
                 "simple-import-sort/imports": [
                     "warn",
                     {
@@ -321,9 +292,7 @@
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(helpers?$)",
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(utilities?$)"
                             ],
-                            [
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(modules?$)"
-                            ],
+                            ["^@?(app|src|core|layouts|store|widgets)(/.*)(modules?$)"],
                             [
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(shared)",
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(constants?$)",
@@ -340,20 +309,14 @@
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(states?$)",
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(stores?$)"
                             ],
-                            [
-                                "^(\\.{1,2})(/.*)(helpers?$)",
-                                "^(\\.{1,2})(/.*)(utilities?$)"
-                            ],
+                            ["^(\\.{1,2})(/.*)(helpers?$)", "^(\\.{1,2})(/.*)(utilities?$)"],
                             [
                                 "^(\\.{1,2})(/.*)(shared$)",
                                 "^(\\.{1,2})(/.*)(constants?$)",
                                 "^(\\.{1,2})(/.*)(enums?$)",
                                 "^(\\.{1,2})(/.*)(models?$)"
                             ],
-                            [
-                                "^(\\.{1,2})(/.*)(components?$)",
-                                "^(\\.{1,2})(/.*)(services?$)"
-                            ],
+                            ["^(\\.{1,2})(/.*)(components?$)", "^(\\.{1,2})(/.*)(services?$)"],
                             [
                                 "^(\\.{1,2})(/.*)(actions?$)",
                                 "^(\\.{1,2})(/.*)(selectors?$)",
@@ -364,18 +327,12 @@
                     }
                 ],
                 "simple-import-sort/exports": "warn",
-                // Prettier
                 "prettier/prettier": "warn"
             }
         },
         {
-            "files": [
-                "*.html"
-            ],
-            "extends": [
-                "plugin:@angular-eslint/template/recommended",
-                "plugin:@angular-eslint/template/accessibility"
-            ],
+            "files": ["*.html"],
+            "extends": ["plugin:@angular-eslint/template/recommended", "plugin:@angular-eslint/template/accessibility"],
             "rules": {}
         }
     ]
