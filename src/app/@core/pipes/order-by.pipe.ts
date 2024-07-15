@@ -7,7 +7,7 @@ import { Pipe, type PipeTransform } from '@angular/core';
 export class OrderByPipe implements PipeTransform {
     transform(array: any[], field: string, asc = true) {
         if (!Array.isArray(array)) {
-            return;
+            return [];
         }
 
         array.sort((current: any, next: any) => {
