@@ -1,6 +1,6 @@
 {
     "root": true,
-    "ignorePatterns": ["*.spec.ts", "*.js", "*.{html,css,scss,md}"],
+    "ignorePatterns": ["**/*.spec.ts", "**/*.{html,css,scss,md,yml}", "node_modules", "e2e", "build"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -284,15 +284,15 @@
                                 "^@?\\w"
                             ],
                             [
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(guards?$)",
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(pipes?$)",
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(directives?$)"
+                                "^@?(app|src|core)(/.*)(guards?$)",
+                                "^@?(app|src|core)(/.*)(pipes?$)",
+                                "^@?(app|src|core)(/.*)(directives?$)"
                             ],
                             [
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(helpers?$)",
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(utilities?$)"
                             ],
-                            ["^@?(app|src|core|layouts|store|widgets)(/.*)(modules?$)"],
+                            ["^@?(app|src|layouts|widgets)(/.*)(modules?$)"],
                             [
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(shared)",
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(constants?$)",
@@ -300,14 +300,15 @@
                                 "^@?(app|src|core|layouts|store|widgets)(/.*)(models?$)"
                             ],
                             [
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(components?$)",
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(services?$)"
+                                "^@?(app|src|layouts|widgets)(/.*)(components?$)",
+                                "^@?(app|src|core|widgets)(/.*)(services?$)"
                             ],
                             [
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(actions?$)",
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(selectors?$)",
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(states?$)",
-                                "^@?(app|src|core|layouts|store|widgets)(/.*)(stores?$)"
+                                "^@?store(/.)*",
+                                "^@?(app|src|store)(/.*)(actions?$)",
+                                "^@?(app|src|store)(/.*)(selectors?$)",
+                                "^@?(app|src|store)(/.*)(states?$)",
+                                "^@?(app|src|store)(/.*)(stores?$)"
                             ],
                             ["^(\\.{1,2})(/.*)(helpers?$)", "^(\\.{1,2})(/.*)(utilities?$)"],
                             [
