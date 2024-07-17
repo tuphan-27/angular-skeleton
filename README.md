@@ -1,4 +1,4 @@
-## Getting Started
+## Technologies Used
 
 **Angular Version**: v17.
 
@@ -12,32 +12,53 @@
 
 ### @core
 
-Includes Angular-related elements (directives, pipes, guards, interceptors, pipes, services) shared across modules in the app.
+This folder includes Angular-related elements shared across modules in the app:
+- Directives
+- Guards
+- Pipes
+- Services
 
 ### @layouts
 
-Includes components used to create layouts, such as navbar, header and footer.
+This folder includes components used to create layouts:
+- Navigation Bar
+- Header
+- Footer
 
 ### @store
 
-Includes global store management for the app.
+This folder includes the global store management in the app.
 
 ### @widgets
 
-Includes shared components used across modules in the app. These components should handle non-business logic.
+This folder includes shared components used accross modules in the app.
+**Note**: these components should handle non-business logic and not depend on features.
+
+- Button
+- Popup
+- Chart
 
 ### pages
 
-Includes modules handling non-business logic, such as the landing page or not-found page.
+This folder includes modules handling non-business logic. Each page represent for one routing,
+- Landing Page
+- 404 Page
 
 ### shared
 
-Includes Typescript elements (constants, enums, models, ultilities) shared across modules in the app.
+This folder includes Typescript-related elements shared across modules in the app:
+- Constants
+- Models
+- Enums
+- Ultilities
 
 ### modules
 
-Includes modules handling business logic. Each module should represent a specific feature.
+This folder includes modules handling business logic. Each module should represent a specific feature.
+- Dashboard
+- Email Settings
+- Account Settings
 
 ### modules/shared
 
-Includes shared modules handling business logic are used to accross featured modules.
+This folder includes modules handling business logic are shared accross featured modules.
