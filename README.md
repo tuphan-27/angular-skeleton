@@ -32,6 +32,7 @@ This folder includes the global store management in the app.
 ### @widgets
 
 This folder includes shared components used accross modules in the app.
+
 **Note**: these components should handle non-business logic and not depend on features.
 
 - Button
