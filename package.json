@@ -82,7 +82,7 @@
         "*.{ts,html}": [
             "eslint --max-warnings=0 --fix"
         ],
-        "!(*.html)": [
+        "*": [
             "prettier --ignore-unknown --write"
         ]
     }
