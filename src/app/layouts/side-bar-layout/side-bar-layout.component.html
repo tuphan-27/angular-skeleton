@@ -1,0 +1,13 @@
+<div class="h-full w-full flex flex-col">
+    <app-header class="flex-shrink-0"></app-header>
+
+    <div class="flex flex-grow min-h-0">
+        <app-side-bar [menuItems]="menuItems"></app-side-bar>
+
+        <div class="min-w-0 w-full">
+            <ng-content></ng-content>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

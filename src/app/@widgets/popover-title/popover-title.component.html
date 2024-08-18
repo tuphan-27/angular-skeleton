@@ -1,0 +1,12 @@
+<div class="relative text-center">
+    <div>{{ title }}</div>
+
+    <span
+        class="absolute top-0 -right-1"
+        [ngStyle]="{ color: isVisible ? '#333' : '#fff' }"
+        (click)="onClose()"
+        (mouseenter)="onToggleVisible()"
+        (mouseout)="onToggleVisible()">
+        <i class="fas fa-times"> </i>
+    </span>
+</div>

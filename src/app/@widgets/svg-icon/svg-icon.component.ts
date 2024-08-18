@@ -17,7 +17,7 @@ export class SvgIconComponent implements OnInit {
 
     @Input() name = '';
     @Input() data = '';
-    @Input() width = '20px';
+    @Input() width = '5rem';
     @Input() color = '';
 
     constructor(
@@ -38,8 +38,6 @@ export class SvgIconComponent implements OnInit {
         const div = document.createElement('div');
         div.innerHTML = svgData ?? '';
 
-        this._elementRef.nativeElement.appendChild(
-            div.querySelector('svg') || document.createElementNS('http://www.w3.org/2000/svg', 'path')
-        );
+        this._elementRef.nativeElement.appendChild(div.querySelector('svg'));
     }
 }

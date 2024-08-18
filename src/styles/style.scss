@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts/Inter/Inter_Regular.scss';
+@import 'fonts/Inter/Inter_Medium.scss';
+@import 'fonts/Inter/Inter_SemiBold.scss';
+
+@import 'global';
+@import 'variables';
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Inter Regular', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    font-weight: 500;
+    color: var(--color-primary);
+}

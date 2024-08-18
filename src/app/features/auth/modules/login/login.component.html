@@ -1,0 +1,48 @@
+<div class="h-full w-full flex justify-center items-center">
+    <div class="flex flex-col gap-4 justify-center px-2 w-96 h-48 rounded-lg shadow-md">
+        <dx-text-box
+            placeholder="Enter Your Email Address"
+            valueChangeEvent="input"
+            [(value)]="form.email">
+            <dx-validator (onValidated)="onValidated($event, 'email')">
+                <dxi-validation-rule
+                    message="This email address is required"
+                    type="required">
+                </dxi-validation-rule>
+
+                <dxi-validation-rule
+                    message="This email address is invalid"
+                    type="pattern"
+                    [pattern]="EMAIL_REGEX">
+                </dxi-validation-rule>
+            </dx-validator>
+        </dx-text-box>
+
+        <dx-text-box
+            mode="password"
+            placeholder="Enter Your Password"
+            valueChangeEvent="input"
+            [(value)]="form.password">
+            <dx-validator (onValidated)="onValidated($event, 'password')">
+                <dxi-validation-rule
+                    message="This password is required"
+                    type="required">
+                </dxi-validation-rule>
+            </dx-validator>
+        </dx-text-box>
+
+        <div class="flex gap-2 items-center justify-between">
+            <app-custom-button
+                text="Login"
+                [disabled]="!validationGroup.isValidated"
+                (clicked)="onLogin()">
+            </app-custom-button>
+
+            <a
+                class="text-primary font-bold"
+                [routerLink]="PAGE_ROUTES.AUTH_SIGNUP">
+                Sign In
+            </a>
+        </div>
+    </div>
+</div>

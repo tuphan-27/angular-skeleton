@@ -1,0 +1,52 @@
+<div class="relative w-full">
+    @if (isLoading()) {
+        <dx-load-panel
+            [showPane]="false"
+            [visible]="true">
+        </dx-load-panel>
+    } @else {
+        <div class="w-full p-3">
+            <div class="grid grid-cols-2 gap-5">
+                <dx-text-box [(value)]="boat().name"></dx-text-box>
+
+                <dx-text-box [(value)]="boat().region"></dx-text-box>
+
+                <dx-text-box [(value)]="boat().tripCategory"></dx-text-box>
+
+                <dx-text-box [(value)]="boat().driverContactInfo"></dx-text-box>
+
+                <dx-text-box [(value)]="boat().departingHarbor1"></dx-text-box>
+
+                <dx-text-box [(value)]="boat().departingHarbor2"></dx-text-box>
+
+                <dx-text-box [(value)]="boat().note"></dx-text-box>
+
+                <dx-text-box [(value)]="boat().organizerName"></dx-text-box>
+            </div>
+
+            <app-custom-button
+                class="mt-5 block"
+                text="Delete"
+                type="danger"
+                width="16rem"
+                (clicked)="onDeleteBoatClicked()">
+            </app-custom-button>
+        </div>
+    }
+</div>
+
+@if (isConfirmationPopupVisible()) {
+    <app-popup-container
+        title="Delete Boat!"
+        width="15rem"
+        [cancelButtonOptions]="{
+            visible: false
+        }"
+        [saveButtonOptions]="{
+            text: 'Confirm',
+            visible: true,
+            onClick: onDeleteBoat
+        }"
+        [(visible)]="isConfirmationPopupVisible">
+    </app-popup-container>
+}

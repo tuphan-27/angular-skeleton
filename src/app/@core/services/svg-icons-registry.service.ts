@@ -14,7 +14,7 @@ export class SvgIconsRegistryService {
 
     getIcon(iconName: string) {
         if (!this._registry.has(iconName)) {
-            return;
+            throw new Error(`Unable to find icon with name: ${iconName}`);
         }
 
         return this._registry.get(iconName);

@@ -1,4 +1,4 @@
-import { Pipe, type PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
     name: 'appNullValue',
@@ -12,9 +12,9 @@ export class NullValuePipe implements PipeTransform {
 
         switch (typeof value) {
             case 'string':
-                return value.trim() ? value : '-';
+                return value.trim() ?? '-';
             default:
-                return value;
+                return value ?? '-';
         }
     }
 }

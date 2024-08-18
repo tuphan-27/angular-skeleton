@@ -1,0 +1,10 @@
+<dx-scroll-view class="w-40 bg-light">
+    <dx-list [dataSource]="menuItems">
+        <div
+            *dxTemplate="let data of 'item'"
+            [routerLink]="data.routerLink ?? null"
+            [routerLinkActive]="'font-bold'">
+            {{ data.text }}
+        </div>
+    </dx-list>
+</dx-scroll-view>

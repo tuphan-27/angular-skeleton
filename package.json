@@ -1,5 +1,5 @@
 {
-    "name": "angular-skeleton",
+    "name": "app",
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
@@ -22,8 +22,13 @@
         "@angular/platform-browser": "^17.3.11",
         "@angular/platform-browser-dynamic": "^17.3.11",
         "@angular/router": "^17.3.11",
-        "devextreme-angular": "^23.2.5",
         "@ngxs/store": "^18.0.0",
+        "devextreme": "23.1",
+        "devextreme-angular": "23.1",
+        "i": "^0.3.7",
+        "jwt-decode": "^4.0.0",
+        "ngx-device-detector": "^7.0.0",
+        "npm": "^10.8.2",
         "rxjs": "~7.5.0",
         "zone.js": "~0.14.7"
     },
@@ -47,6 +52,7 @@
         "globals": "^15.0.0",
         "husky": "^9.0.11",
         "jasmine-core": "~4.5.0",
+        "json-server": "^0.17.4",
         "karma": "~6.4.0",
         "karma-chrome-launcher": "~3.1.0",
         "karma-coverage": "~2.2.0",
@@ -73,6 +79,11 @@
         "compileSources": true
     },
     "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown"
+        "*.{ts,html}": [
+            "eslint --max-warnings=0 --fix"
+        ],
+        "!(*.html)": [
+            "prettier --ignore-unknown --write"
+        ]
     }
 }
