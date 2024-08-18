@@ -23,12 +23,17 @@
                         "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
+                        "allowedCommonJsDependencies": [
+                            "devextreme-quill",
+                            "devexpress-diagram",
+                            "devexpress-gantt",
+                            "jszip"
+                        ],
                         "assets": ["src/assets/images/favicon.ico", "src/assets"],
                         "styles": ["node_modules/devextreme/dist/css/dx.light.css", "src/styles/style.scss"],
                         "stylePreprocessorOptions": {
                             "includePaths": ["src/styles"]
-                        },
-                        "scripts": []
+                        }
                     },
                     "configurations": {
                         "production": {
