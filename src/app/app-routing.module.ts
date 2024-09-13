@@ -11,12 +11,12 @@ const ROUTES: Routes = [
     },
     {
         path: 'auth',
-        loadChildren: () => import('./features/auth/auth.module').then((m) => m.AuthModule),
+        loadChildren: () => import('./features/auth/auth.routes'),
         canActivate: [GuestGuard]
     },
     {
         path: 'admin',
-        loadChildren: () => import('./features/admin/admin.module').then((m) => m.AdminModule),
+        loadChildren: () => import('./features/admin/admin.routes'),
         canActivate: [AuthGuard]
     },
     {
