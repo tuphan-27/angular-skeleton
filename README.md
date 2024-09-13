@@ -61,7 +61,7 @@ This folder includes Typescript-related things shared across modules in the app:
 -   Enums
 -   Utilities
 
-### 7. modules
+### 7. features
 
 This folder includes modules handling business logic. Each module should represent a specific feature.
 
@@ -69,7 +69,7 @@ This folder includes modules handling business logic. Each module should represe
 -   Email Settings
 -   Account Settings
 
-### 7.1. modules/shared
+### 7.1. features/shared
 
 This folder includes modules handling business logic are shared across featured modules. Ideally,
 features should not depend on each other, but if dependencies occur, we should eliminate bidirectional communication between them.
