@@ -14,21 +14,20 @@ const ROUTES: Routes = [
             },
             {
                 path: 'dashboard',
-                loadComponent: () =>
-                    import('./containers/dashboard/dashboard.component').then((m) => m.DashboardComponent)
+                loadComponent: () => import('./pages/dashboard/dashboard.component').then((m) => m.DashboardComponent)
             },
             {
                 path: 'users',
-                loadComponent: () => import('./containers/users/users.component').then((m) => m.UsersComponent)
+                loadComponent: () => import('./pages/users/users.component').then((m) => m.UsersComponent)
             },
             {
                 path: 'boats',
-                loadComponent: () => import('./containers/boats/boats.component').then((m) => m.BoatsComponent)
+                loadComponent: () => import('./pages/boats/boats.component').then((m) => m.BoatsComponent)
             },
             {
                 path: 'boats/:id',
                 loadComponent: () =>
-                    import('./containers/boat-details/boat-details.component').then((m) => m.BoatDetailsComponent)
+                    import('./pages/boat-details/boat-details.component').then((m) => m.BoatDetailsComponent)
             }
         ]
     }

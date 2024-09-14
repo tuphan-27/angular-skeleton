@@ -15,17 +15,23 @@ const ROUTES: Routes = [
         canActivate: [GuestGuard]
     },
     {
+        path: 'client',
+        loadChildren: () => import('./pages/client/client.routes'),
+        canActivate: [AuthGuard]
+    },
+    {
         path: 'admin',
         loadChildren: () => import('./features/admin/admin.routes'),
         canActivate: [AuthGuard]
     },
     {
         path: 'maintenance',
-        loadComponent: () => import('./pages/maintenance/maintenance.component').then((m) => m.PageMaintenanceComponent)
+        loadComponent: () =>
+            import('./static-pages/maintenance/maintenance.component').then((m) => m.PageMaintenanceComponent)
     },
     {
         path: '**',
-        loadComponent: () => import('./pages/not-found/not-found.component').then((m) => m.PageNotFoundComponent)
+        loadComponent: () => import('./static-pages/not-found/not-found.component').then((m) => m.PageNotFoundComponent)
     }
 ];
 
