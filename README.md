@@ -45,14 +45,20 @@ This folder includes components used to create layouts:
 -   Header
 -   Footer
 
-### 5. pages
+### 5. static-pages
 
 This folder includes modules handling non-business logic. Each page represent for one routing,
 
 -   Landing Page
 -   404 Page
 
-### 6. shared
+### 6. pages
+
+This folder includes container modules for some features that share the same layout.
+
+-   client
+
+### 7. shared
 
 This folder includes Typescript-related things shared across modules in the app:
 
@@ -61,7 +67,7 @@ This folder includes Typescript-related things shared across modules in the app:
 -   Enums
 -   Utilities
 
-### 7. features
+### 8. features
 
 This folder includes modules handling business logic. Each module should represent a specific feature.
 
@@ -69,7 +75,7 @@ This folder includes modules handling business logic. Each module should represe
 -   Email Settings
 -   Account Settings
 
-### 7.1. features/shared
+### 8.1. features/shared
 
 This folder includes modules handling business logic are shared across featured modules. Ideally,
 features should not depend on each other, but if dependencies occur, we should eliminate bidirectional communication between them.
