@@ -17,11 +17,11 @@
 
 This folder includes Angular-related things shared across modules in the app:
 
--   Directives
--   Guards
--   Pipes
--   Interceptors
--   Services
+-   directives
+-   guards
+-   pipes
+-   interceptors
+-   services
 
 ### 2. @store
 
@@ -33,28 +33,29 @@ This folder includes shared components used across modules in the app.
 
 > These components should handle non-business logic and should not depend on features.
 
--   Button
--   Popup
--   Chart
+-   button
+-   popup
+-   chart
 
 ### 4. layouts
 
 This folder includes components used to create layouts:
 
--   Navigation Bar
--   Header
--   Footer
+-   navigation-bar
+-   header
+-   footer
 
 ### 5. static-pages
 
 This folder includes modules handling non-business logic. Each page represent for one routing,
 
--   Landing Page
--   404 Page
+-   landing-page
+-   note-found-page
 
 ### 6. pages
 
-This folder includes container modules for some features that share the same layout.
+This folder includes container modules for some features that share the same layout. Normally, these pages
+should include `<router-outlet>`.
 
 -   client
 
@@ -62,18 +63,18 @@ This folder includes container modules for some features that share the same lay
 
 This folder includes Typescript-related things shared across modules in the app:
 
--   Constants
--   Models
--   Enums
--   Utilities
+-   constants
+-   models
+-   enums
+-   utilities
 
 ### 8. features
 
 This folder includes modules handling business logic. Each module should represent a specific feature.
 
--   Dashboard
--   Email Settings
--   Account Settings
+-   dashboard
+-   email-settings
+-   account-settings
 
 ### 8.1. features/shared
 
