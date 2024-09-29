@@ -21,18 +21,8 @@ export class AuthInterceptor implements HttpInterceptor {
 
         return next.handle(req).pipe(
             catchError(async (error) => {
-                if (error.status === HttpStatusCode.NotFound) {
-                    const isLoggedIn = await this._authService.isLoggedIn();
-
-                    if (!isLoggedIn) {
-                        this._router.navigate([PAGE_ROUTES.AUTH_LOGIN]);
-
-                        return throwError(() => error);
-                    }
-
-                    req = this._setAuthHeader(req);
-
-                    return next.handle(req);
+                if (error.status === HttpStatusCode.Unauthorized) {
+                    return this._handleUnauthorized(req, next, error);
                 }
 
                 return throwError(() => error);
@@ -41,6 +31,18 @@ export class AuthInterceptor implements HttpInterceptor {
                 return response instanceof Observable ? response : of(response);
             })
         );
+    }
+
+    private async _handleUnauthorized(req: HttpRequest<any>, next: HttpHandler, error: any) {
+        if (await this._authService.isLoggedIn()) {
+            const newReq = this._setAuthHeader(req);
+
+            return next.handle(newReq);
+        }
+
+        await this._router.navigate([PAGE_ROUTES.AUTH_LOGIN]);
+
+        return throwError(() => error);
     }
 
     private _setAuthHeader(req: HttpRequest<any>) {

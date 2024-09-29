@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { AuthGuard, GuestGuard } from '@core/guards';
 
@@ -35,8 +34,4 @@ const ROUTES: Routes = [
     }
 ];
 
-@NgModule({
-    imports: [RouterModule.forRoot(ROUTES)],
-    exports: [RouterModule]
-})
-export class AppRoutingModule {}
+export default ROUTES;
