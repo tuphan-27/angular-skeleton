@@ -49,7 +49,7 @@
                                     "maximumError": "4kb"
                                 }
                             ],
-                            "baseHref": "/angular-skeleton/",
+                            "baseHref": "/",
                             "outputHashing": "all",
                             "fileReplacements": [
                                 {
