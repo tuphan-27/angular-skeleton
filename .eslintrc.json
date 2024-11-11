@@ -19,6 +19,7 @@
             ],
             "plugins": ["simple-import-sort"],
             "rules": {
+                // Angular
                 "@angular-eslint/directive-selector": [
                     "error",
                     {
@@ -36,6 +37,7 @@
                     }
                 ],
                 "@angular-eslint/prefer-on-push-component-change-detection": ["error"],
+                // Typescript
                 "@typescript-eslint/no-explicit-any": "off",
                 "@typescript-eslint/no-var-requires": "off",
                 "no-array-constructor": "off",
@@ -270,6 +272,7 @@
                 "no-fallthrough": "off",
                 "no-invalid-this": "off",
                 "no-underscore-dangle": "off",
+                // Sort imports
                 "simple-import-sort/imports": [
                     "warn",
                     {

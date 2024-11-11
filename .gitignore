@@ -44,3 +44,8 @@ package-lock.json
 db.json
 
 .nx
+
+
+
+.nx/cache
+.nx/workspace-data

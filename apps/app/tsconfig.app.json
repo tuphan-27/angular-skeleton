@@ -1,0 +1,27 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "../../dist/out-tsc",
+        "types": [],
+        "paths": {
+            "@environment": ["apps/app/src/environments/environment.ts"],
+            "@environments/*": ["apps/app/src/app/environments/*"],
+            "@core": ["apps/app/src/app/@core"],
+            "@core/*": ["apps/app/src/app/@core/*"],
+            "@store": ["apps/app/src/app/@store"],
+            "@store/*": ["apps/app/src/app/@store/*"],
+            "@widgets": ["apps/app/src/app/@widgets"],
+            "@widgets/*": ["apps/app/src/app/@widgets/*"],
+            "@layouts": ["apps/app/src/app/@layouts"],
+            "@layouts/*": ["apps/app/src/app/@layouts/*"],
+            "@app/icons": ["apps/app/src/assets/icons"],
+            "@app/icons/*": ["apps/app/src/assets/icons/*"],
+            "@app/shared": ["apps/app/src/app/shared"],
+            "@app/shared/*": ["apps/app/src/app/shared/*"],
+            "@app/modules/": ["apps/app/src/app/features"],
+            "@app/modules/*": ["apps/app/src/app/features/*"]
+        }
+    },
+    "files": ["src/main.ts"],
+    "include": ["src/**/*.d.ts"]
+}
