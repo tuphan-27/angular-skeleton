@@ -1,8 +1,6 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SvgIconsRegistryService } from '@core/services';
-
 @Component({
     selector: 'app-svg-icon',
     standalone: true,
@@ -15,15 +13,11 @@ export class SvgIconComponent implements OnInit {
     @HostBinding('style.width') widthStyle = '';
     @HostBinding('style.color') colorStyle = '';
 
-    @Input() name = '';
     @Input() data = '';
     @Input() width = '5rem';
     @Input() color = '';
 
-    constructor(
-        private _elementRef: ElementRef,
-        private _svgIconRegistry: SvgIconsRegistryService
-    ) {}
+    constructor(private _elementRef: ElementRef) {}
 
     ngOnInit() {
         this.widthStyle = this.width;
@@ -33,10 +27,8 @@ export class SvgIconComponent implements OnInit {
     }
 
     generateIcon() {
-        const svgData = this.name ? this._svgIconRegistry.getIcon(this.name) : this.data;
-
         const div = document.createElement('div');
-        div.innerHTML = svgData ?? '';
+        div.innerHTML = this.data ?? '';
 
         this._elementRef.nativeElement.appendChild(div.querySelector('svg'));
     }
