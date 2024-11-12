@@ -4,33 +4,35 @@ import { AuthGuard, GuestGuard } from '@core/guards';
 
 const ROUTES: Routes = [
     {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'admin'
-    },
-    {
         path: 'auth',
         loadChildren: () => import('./features/auth/auth.routes'),
         canActivate: [GuestGuard]
     },
     {
-        path: 'client',
-        loadChildren: () => import('./pages/client/client.routes'),
-        canActivate: [AuthGuard]
-    },
-    {
         path: 'admin',
-        loadChildren: () => import('./features/admin/admin.routes'),
-        canActivate: [AuthGuard]
+        loadComponent: () =>
+            import('./layouts/admin-layout/admin-layout.component').then((c) => c.AdminLayoutComponent),
+        canActivate: [AuthGuard],
+        children: [
+            {
+                path: '',
+                loadChildren: () => import('./features/admin/admin.routes')
+            }
+        ]
     },
     {
         path: 'maintenance',
-        loadComponent: () =>
-            import('./static-pages/maintenance/maintenance.component').then((m) => m.PageMaintenanceComponent)
+        loadComponent: () => import('./pages/maintenance/maintenance.component').then((c) => c.PageMaintenanceComponent)
+    },
+    {
+        path: '',
+        loadComponent: () => import('./layouts/main-layout/main-layout.component').then((c) => c.MainLayoutComponent),
+        canActivate: [AuthGuard],
+        children: []
     },
     {
         path: '**',
-        loadComponent: () => import('./static-pages/not-found/not-found.component').then((m) => m.PageNotFoundComponent)
+        loadComponent: () => import('./pages/not-found/not-found.component').then((c) => c.PageNotFoundComponent)
     }
 ];
 
