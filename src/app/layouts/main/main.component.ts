@@ -4,10 +4,10 @@ import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-main-layout',
-    styleUrl: './main-layout.component.scss',
+    styleUrl: './main.component.scss',
     standalone: true,
     imports: [CommonModule, RouterModule],
-    templateUrl: './main-layout.component.html',
+    templateUrl: './main.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainLayoutComponent {}

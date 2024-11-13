@@ -10,8 +10,7 @@ const ROUTES: Routes = [
     },
     {
         path: 'admin',
-        loadComponent: () =>
-            import('./layouts/admin-layout/admin-layout.component').then((c) => c.AdminLayoutComponent),
+        loadComponent: () => import('./layouts/admin/admin.component').then((c) => c.AdminLayoutComponent),
         canActivate: [AuthGuard],
         children: [
             {
@@ -26,7 +25,7 @@ const ROUTES: Routes = [
     },
     {
         path: '',
-        loadComponent: () => import('./layouts/main-layout/main-layout.component').then((c) => c.MainLayoutComponent),
+        loadComponent: () => import('./layouts/main/main.component').then((c) => c.MainLayoutComponent),
         canActivate: [AuthGuard],
         children: []
     },
