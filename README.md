@@ -98,29 +98,9 @@ npm run generate-icons
 > Svg icons from the `icons` folder will be collected by the `svg-to-ts` package. Constants will be
 > generated and located inside the `icons.constants.ts` file in the `icons` folder.
 
-3. Register svg icons in modules where they will be used(optional)
-
-```ts
-const SVG_ICONS = [svgIconChevronDown];
-
-@NgModule({ ... })
-export class DashboardModule {
-    constructor(private _svgIconsRegistryService: SvgIconsRegistryService) {
-        _svgIconsRegistryService.registerIcons(SVG_ICONS);
-    }
-}
-```
-
-4. Use icons in templates
+3. Use icons in templates
 
 ```html
-<!--FOR REGISTERED ICONS-->
-<app-svg-icon
-    name="icon_chevron_down"
-    [width]="20">
-</app-svg-icon>
-
-<!--FOR UNREGISTERED ICONS-->
 <app-svg-icon
     [data]="svgIconChevronDown.data"
     [width]="20">
