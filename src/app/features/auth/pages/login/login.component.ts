@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { DxTextBoxModule, DxValidatorModule } from 'devextreme-angular';
-import { CustomButtonComponent } from '@widgets';
+import { ButtonComponent } from '@widgets';
 
 import { EMAIL_REGEX, PAGE_ROUTES } from '@app/shared/constants';
 import { AuthViewModel } from '@app/shared/models';
@@ -11,7 +11,7 @@ import { AuthService } from '@core/services';
 
 const DEVEXTREMES = [DxTextBoxModule, DxValidatorModule];
 
-const WIDGETS = [CustomButtonComponent];
+const WIDGETS = [ButtonComponent];
 
 @Component({
     selector: 'app-login',

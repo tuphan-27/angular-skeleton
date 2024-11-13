@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { finalize } from 'rxjs';
 import { DxLoadPanelModule, DxTextBoxModule } from 'devextreme-angular';
-import { CustomButtonComponent, PopupContainerComponent } from '@widgets';
+import { ButtonComponent, ContainerPopupComponent } from '@widgets';
 
 import { BoatService } from '../../services';
 
@@ -11,7 +11,7 @@ import { BoatViewModel } from '../../models/boat';
 
 const DEVEXTREMES = [DxTextBoxModule, DxLoadPanelModule];
 
-const WIDGETS = [CustomButtonComponent, PopupContainerComponent];
+const WIDGETS = [ButtonComponent, ContainerPopupComponent];
 
 @Component({
     selector: 'app-boat-details',

@@ -32,7 +32,7 @@
                 <ng-container [ngTemplateOutlet]="footerTemplate"></ng-container>
             } @else {
                 <div class="flex gap-2">
-                    <app-custom-button
+                    <app-button
                         *ngIf="saveButtonOptions.visible"
                         [disabled]="saveButtonOptions.disabled"
                         [isLoading]="saveButtonOptions.isLoading"
@@ -40,9 +40,9 @@
                         [type]="saveButtonOptions.type ?? 'primary'"
                         [width]="saveButtonOptions.width ?? 'auto'"
                         (clicked)="onSave()">
-                    </app-custom-button>
+                    </app-button>
 
-                    <app-custom-button
+                    <app-button
                         *ngIf="cancelButtonOptions.visible"
                         [disabled]="cancelButtonOptions.disabled"
                         [isLoading]="cancelButtonOptions.isLoading"
@@ -50,9 +50,9 @@
                         [type]="cancelButtonOptions.type ?? 'secondary'"
                         [width]="cancelButtonOptions.width ?? 'auto'"
                         (clicked)="onCancel()">
-                    </app-custom-button>
+                    </app-button>
 
-                    <app-custom-button
+                    <app-button
                         *ngIf="deleteButtonOptions.visible"
                         class="ml-auto"
                         [disabled]="deleteButtonOptions.disabled"
@@ -61,7 +61,7 @@
                         [type]="deleteButtonOptions.type ?? 'primary'"
                         [width]="deleteButtonOptions.width ?? 'auto'"
                         (clicked)="onDelete()">
-                    </app-custom-button>
+                    </app-button>
                 </div>
             }
         </div>

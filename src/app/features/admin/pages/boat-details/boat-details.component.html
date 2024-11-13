@@ -24,19 +24,19 @@
                 <dx-text-box [(value)]="boat().organizerName"></dx-text-box>
             </div>
 
-            <app-custom-button
+            <app-button
                 class="mt-5 block"
                 text="Delete"
                 type="danger"
                 width="16rem"
                 (clicked)="onDeleteBoatClicked()">
-            </app-custom-button>
+            </app-button>
         </div>
     }
 </div>
 
 @if (isConfirmationPopupVisible()) {
-    <app-popup-container
+    <app-container-popup
         title="Delete Boat!"
         width="15rem"
         [cancelButtonOptions]="{
@@ -48,5 +48,5 @@
             onClick: onDeleteBoat
         }"
         [(visible)]="isConfirmationPopupVisible">
-    </app-popup-container>
+    </app-container-popup>
 }

@@ -1,6 +1,5 @@
 <dx-popover
     #popover
-    class="popover-title"
     [position]="position"
     [shading]="false"
     [showCloseButton]="true"
@@ -9,31 +8,26 @@
     [width]="width"
     (onHidden)="onHidden()">
     <div *dxTemplate="let data of 'title'">
-        <app-popover-title
-            [title]="title"
-            (closed)="onClose()">
-        </app-popover-title>
+        {{ title }}
     </div>
 
     <div *dxTemplate="let data of 'content'">
-        <div class="d-flex justify-content-center mb-1 confirm-box">
+        <div class="flex justify-center">
             <div>
                 <div
                     class="text-center mb-3"
                     [innerHTML]="message"></div>
 
-                <div class="button-confirm text-center">
-                    <app-custom-button
-                        class="mr-2"
+                <div class="flex items-center gap-2">
+                    <app-button
                         text="Yes"
                         (clicked)="onConfirm()">
-                    </app-custom-button>
+                    </app-button>
 
-                    <app-custom-button
-                        class="ml-2"
+                    <app-button
                         text="No"
                         (clicked)="onCancel()">
-                    </app-custom-button>
+                    </app-button>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { ButtonType } from '@widgets/custom-button/enums';
+import { ButtonType } from '@widgets/button/enums';
 
 export class ButtonOptions {
     text?: string;

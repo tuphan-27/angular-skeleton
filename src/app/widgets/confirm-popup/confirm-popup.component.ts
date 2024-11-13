@@ -3,22 +3,21 @@ import { CommonModule } from '@angular/common';
 import { DxPopoverComponent, DxPopoverModule } from 'devextreme-angular';
 import { Position } from 'devextreme-angular/common';
 
-import { CustomButtonComponent } from '@widgets/custom-button/custom-button.component';
-import { PopoverTitleComponent } from '@widgets/popover-title/popover-title.component';
+import { ButtonComponent } from '../button/button.component';
 
 const DEVEXTREMES = [DxPopoverModule];
 
-const WIDGETS = [CustomButtonComponent, PopoverTitleComponent];
+const WIDGETS = [ButtonComponent];
 
 @Component({
-    selector: 'app-popover-confirm-box',
+    selector: 'app-confirm-popup',
     standalone: true,
     imports: [CommonModule, ...DEVEXTREMES, ...WIDGETS],
-    templateUrl: './popover-confirm-box.component.html',
-    styleUrls: ['./popover-confirm-box.component.scss'],
+    templateUrl: './confirm-popup.component.html',
+    styleUrls: ['./confirm-popup.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PopoverConfirmBoxComponent {
+export class ConfirmPopupComponent {
     @ViewChild('popover') popover: DxPopoverComponent;
 
     @Input() title: string;

@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 import { DxPopupModule, DxScrollViewModule } from 'devextreme-angular';
 import { PositionAlignment } from 'devextreme-angular/common';
 
-import { CustomButtonComponent } from '@widgets/custom-button/custom-button.component';
-
 import { ButtonOptions } from './models';
+
+import { ButtonComponent } from '../button/button.component';
 
 const DEVEXTREMES = [DxPopupModule, DxScrollViewModule];
 
-const WIDGETS = [CustomButtonComponent];
+const WIDGETS = [ButtonComponent];
 
 @Component({
-    selector: 'app-popup-container',
+    selector: 'app-container-popup',
     standalone: true,
     imports: [CommonModule, ...DEVEXTREMES, ...WIDGETS],
-    templateUrl: './popup-container.component.html',
-    styleUrls: ['./popup-container.component.scss'],
+    templateUrl: './container-popup.component.html',
+    styleUrls: ['./container-popup.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PopupContainerComponent {
+export class ContainerPopupComponent {
     private _visible = false;
 
     @Input()

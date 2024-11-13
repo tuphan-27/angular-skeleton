@@ -7,14 +7,14 @@ import { ButtonType } from './enums';
 const DEVEXTREMES = [DxButtonModule];
 
 @Component({
-    selector: 'app-custom-button',
+    selector: 'app-button',
     standalone: true,
     imports: [CommonModule, ...DEVEXTREMES],
-    templateUrl: './custom-button.component.html',
-    styleUrl: './custom-button.component.scss',
+    templateUrl: './button.component.html',
+    styleUrl: './button.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CustomButtonComponent {
+export class ButtonComponent {
     @Input() height: number | string = '100%';
     @Input() width: number | string = '100%';
     @Input() text = 'Save';
