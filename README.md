@@ -13,9 +13,9 @@
 
 ## Project Structure
 
-### 1. @core
+### 1. core
 
-This folder includes Angular-related things shared across modules in the app:
+This folder includes Angular-related things shared across modules:
 
 -   directives
 -   guards
@@ -23,13 +23,13 @@ This folder includes Angular-related things shared across modules in the app:
 -   interceptors
 -   services
 
-### 2. @store
+### 2. store
 
-This folder includes the global store management in the app.
+This folder includes the global store management.
 
-### 3. @widgets
+### 3. widgets
 
-This folder includes shared components used across modules in the app.
+This folder includes shared components used across modules.
 
 > These components should handle non-business logic and should not depend on features.
 
@@ -39,44 +39,38 @@ This folder includes shared components used across modules in the app.
 
 ### 4. layouts
 
-This folder includes components used to create layouts:
+This folder includes components used to conduct layouts:
 
--   navigation-bar
--   header
--   footer
+-   admin-layout
+-   main-layout
+-   mobile-layout
+-   account-settings-layout
 
-### 5. static-pages
+### 5. pages
 
-This folder includes modules handling non-business logic. Each page represent for one routing,
+This folder includes modules handling non-business logic:
 
 -   landing-page
 -   note-found-page
 
-### 6. pages
+### 6. shared
 
-This folder includes container modules for some features that share the same layout. Normally, these pages
-should include `<router-outlet>`.
-
--   client
-
-### 7. shared
-
-This folder includes Typescript-related things shared across modules in the app:
+This folder includes Typescript-related things shared across modules:
 
 -   constants
 -   models
 -   enums
 -   utilities
 
-### 8. features
+### 7. features
 
 This folder includes modules handling business logic. Each module should represent a specific feature.
 
 -   dashboard
 -   email-settings
--   account-settings
+-   account-profile
 
-### 8.1. features/shared
+### 7.1. features/shared
 
 This folder includes modules handling business logic are shared across featured modules. Ideally,
 features should not depend on each other, but if dependencies occur, we should eliminate bidirectional communication between them.
