@@ -21,7 +21,8 @@ const ROUTES: Routes = [
     },
     {
         path: 'maintenance',
-        loadComponent: () => import('./pages/maintenance/maintenance.component').then((c) => c.PageMaintenanceComponent)
+        loadComponent: () =>
+            import('./static-pages/maintenance/maintenance.component').then((c) => c.PageMaintenanceComponent)
     },
     {
         path: '',
@@ -31,7 +32,7 @@ const ROUTES: Routes = [
     },
     {
         path: '**',
-        loadComponent: () => import('./pages/not-found/not-found.component').then((c) => c.PageNotFoundComponent)
+        loadComponent: () => import('./static-pages/not-found/not-found.component').then((c) => c.PageNotFoundComponent)
     }
 ];
 
